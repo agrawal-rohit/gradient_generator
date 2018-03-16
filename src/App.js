@@ -27,7 +27,7 @@ class App extends Component {
 
   upvoteHandler = () => {
     request
-    .post('http://localhost:8000/v1/upvote')
+    .post('https://fast-citadel-80359.herokuapp.com/v1/upvote')
     .set('Content-Type', 'application/json')
     .send({ name: this.state.name,
             user_id: this.state.user_id }) // query string
@@ -55,7 +55,7 @@ class App extends Component {
   addGradient = () => {
     if(this.state.name !== "Untitled") {
       request
-      .post('http://localhost:8000/v1/addgradient')
+      .post('https://fast-citadel-80359.herokuapp.com/v1/addgradient')
       .set('Content-Type', 'application/json')
       .send({ name: this.state.name,
               creator_name: this.state.username,
@@ -140,7 +140,7 @@ class App extends Component {
   loginHandler = () => {
     let token="";
     request
-    .post('http://localhost:8000/v1/signin')
+    .post('https://fast-citadel-80359.herokuapp.com/v1/signin')
     .set('Content-Type', 'application/json')
     .query({ username: this.state.username, password: this.state.password }) // query string
     .end((err, res) => {
@@ -154,7 +154,7 @@ class App extends Component {
         token = res.body.token;
         this.setState({email: res.body.email, user_id: res.body.user_id});
         request
-        .get('http://localhost:8000/v1/protected')
+        .get('https://fast-citadel-80359.herokuapp.com/v1/protected')
         .set('Content-Type', 'application/json')
         .set('Authorization', token)
         .end((err, res) => {
@@ -186,7 +186,7 @@ class App extends Component {
   registerHandler = () => {
     if(this.validateEmail(this.state.email)){
       request
-      .post('http://localhost:8000/v1/signup')
+      .post('https://fast-citadel-80359.herokuapp.com/v1/signup')
       .set('Content-Type', 'application/json')
       .send({ username: this.state.username, email: this.state.email, password: this.state.password }) // query string
       .end((err, res) => {

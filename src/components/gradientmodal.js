@@ -17,7 +17,7 @@ class GradientModal extends Component {
 
   componentWillMount() {
     request
-    .get('http://localhost:8000/v1/allgradients')
+    .get('https://fast-citadel-80359.herokuapp.com/v1/allgradients')
     .set('Content-Type', 'application/json')
     .end((err, res) => {
       if(err){
@@ -31,7 +31,7 @@ class GradientModal extends Component {
 
   componentDidUpdate() {
     request
-    .get('http://localhost:8000/v1/allgradients')
+    .get('https://fast-citadel-80359.herokuapp.com/v1/allgradients')
     .set('Content-Type', 'application/json')
     .end((err, res) => {
       if(err){
