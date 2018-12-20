@@ -2,7 +2,7 @@
   "name": "gradient_generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gradientgenerator.github.io",
+  "homepage": "https://agrawal-rohit.github.io/gradientgenerator",
   "dependencies": {
     "atom-react-color": "^2.13.3",
     "express-http-proxy": "^1.1.0",
