@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "private": true,
-  "homepage": "https://agrawal-rohit.github.io/gradientgenerator",
+  "homepage": ".",
   "dependencies": {
     "atom-react-color": "^2.13.3",
     "express-http-proxy": "^1.1.0",
