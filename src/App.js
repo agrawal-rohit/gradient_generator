@@ -114,11 +114,11 @@ class App extends Component {
   }
 
   colorTextChangeHandler1 = (event) =>{
-    this.setState({color1: "#"+event.target.value});
+    this.setState({color1: "#"+event.target.value, name: 'Untitled', creator: 'none', upvotes: 0});
   }
 
   colorTextChangeHandler2 = (event) =>{
-    this.setState({color2: "#"+event.target.value});
+    this.setState({color2: "#"+event.target.value, name: 'Untitled', creator: 'none', upvotes: 0});
   }
 
   getUsername = (event) => {
